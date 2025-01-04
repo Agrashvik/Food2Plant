@@ -89,20 +89,6 @@
       color: #27ae60;
       margin: 10px 0;
     }
-    .toggle-btn {
-      display: block;
-      margin: 20px auto;
-      padding: 10px 20px;
-      background-color: #27ae60;
-      color: white;
-      font-size: 1.2em;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .toggle-btn:hover {
-      background-color: #2ecc71;
-    }
   </style>
 </head>
 <body>
@@ -114,52 +100,49 @@
       <div class="progress-circle" id="progressCircle">
         <span id="progressText">25%</span>
       </div>
-      <img src="https://images.unsplash.com/photo-1601310442-82f4fd14c706?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjg2OXwwfDF8c2VhY2h8MXx8Y29tcG9zdGluZyUyMGdyb3d0fGVufDB8fHx8fDE2NTg4MTI5MzA&ixlib=rb-1.2.1&q=80&w=1080" alt="Composting Process" style="width: 100%; border-radius: 10px;">
     </div>
-    <button class="toggle-btn" onclick="togglePage()">Go to Shopping Page</button>
   </div>
 
   <div class="container" id="shoppingPage" style="display: none;">
     <h2>Shopping Page</h2>
     <div class="product-list">
       <div class="product">
-        <img src="https://images.unsplash.com/photo-1599997315405-3e2cd0f1bb93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjg2OXwwfDF8c2VhY2h8MjF8fGJva2FzaGklMjBjdWx0dXJlfGVufDB8fHx8fDE2NTg4MTM5Njg&ixlib=rb-1.2.1&q=80&w=1080" alt="Compost">
-        <h3>Compost (1kg)</h3>
+        <img src="https://unsplash.com/photos/person-holding-black-soil-lyMZdag-zgQ" alt="Composting">
+        <h3>Composting</h3>
       </div>
       <div class="product">
-        <img src="https://www.bokashiworld.com/wp-content/uploads/2021/09/black-bokashi-bucket-1-1.jpg" alt="Bokashi Bucket">
+        <img src="https://unsplash.com/photos/gray-steel-bucket-on-brown-wooden-table-LVJRzXqbJ1s" alt="Bokashi Bucket">
         <h3>Bokashi Bucket</h3>
       </div>
       <div class="product">
-        <img src="https://www.bokashiworld.com/wp-content/uploads/2021/09/bokashi-bran-powder-1.jpg" alt="Bokashi Bran Powder">
+        <img src="https://www.istockphoto.com/photo/kinako-japanese-soy-bean-powder-gm911098152-250888247?utm_campaign=srp_photos_bottom&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbokashi-bran-powder&utm_medium=affiliate&utm_source=unsplash&utm_term=bokashi+bran+powder%3A%3A%3A" alt="Bokashi Bran Powder">
         <h3>Bokashi Bran Powder</h3>
       </div>
       <div class="product">
-        <img src="https://www.bokashiworld.com/wp-content/uploads/2021/09/bokashi-composting-kit-1.jpg" alt="Bokashi Composting Kit">
+        <img src="https://unsplash.com/photos/a-white-trash-can-sitting-next-to-a-pile-of-food-wiq5NVjhMZY" alt="Bokashi Composting Kit">
         <h3>Bokashi Composting Kit</h3>
       </div>
       <div class="product">
-        <img src="https://www.coirwarehouse.com/wp-content/uploads/2021/03/Coco-peat-1kg.jpg" alt="Cocopeat">
+        <img src="https://www.istockphoto.com/photo/coconut-cocopeat-husk-chips-surface-background-gm1411530248-461330081" alt="Cocopeat (1kg)">
         <h3>Cocopeat (1kg)</h3>
       </div>
       <div class="product">
-        <img src="https://www.gardeners.com/globalassets/gc/gardeners/catalog/product/2019/images/soil-with-perlite.jpg" alt="Soil with Perlite">
-        <h3>Soil (with added perlite)</h3>
+        <img src="https://www.istockphoto.com/photo/close-up-of-soil-mixed-with-white-perlite-perlite-is-a-rock-of-volcanic-origin-with-gm2162807260-583180406" alt="Soil with Perlite">
+        <h3>Soil with Perlite</h3>
       </div>
       <div class="product">
-        <img src="https://www.earthwisecompost.com/wp-content/uploads/2020/09/compost-activator.jpg" alt="Compost Activator">
+        <img src="https://www.istockphoto.com/photo/cumin-cuminum-cyminum-with-its-powder-and-its-extracted-water-on-brown-wooden-surface-gm926692970-254262872" alt="Compost Activator">
         <h3>Compost Activator</h3>
       </div>
       <div class="product">
-        <img src="https://www.gardeners.com/globalassets/gc/gardeners/catalog/product/2019/images/8-inch-pot.jpg" alt="Pot">
+        <img src="https://www.istockphoto.com/photo/garden-pot-gm173639189-8567334" alt="Pot - 8 inches">
         <h3>Pot - 8 inches</h3>
       </div>
       <div class="product">
-        <img src="https://www.homedepot.com/catalog/productImages/300/0d/0d5ff9b9-caf1-4a93-a88d-01934e9147ab_300.jpg" alt="Gardening Tools">
-        <h3>Gardening Set of Tools</h3>
+        <img src="https://unsplash.com/photos/greyscale-photo-of-gardening-tools-hYbWJvCHVRo" alt="Gardening Tools">
+        <h3>Gardening Tools</h3>
       </div>
     </div>
-    <button class="toggle-btn" onclick="togglePage()">Back to Compost Tracker</button>
   </div>
 
   <footer>
@@ -184,10 +167,9 @@
 
     // Function to toggle between compost tracker and shopping page
     function togglePage() {
-      const compostPage = document.querySelector('.container');
       const shoppingPage = document.getElementById("shoppingPage");
-      compostPage.style.display = compostPage.style.display === "none" ? "block" : "none";
-      shoppingPage.style.display = shoppingPage.style.display === "none" ? "block" : "none";
+      shoppingPage.style.display =
+        shoppingPage.style.display === "none" ? "block" : "none";
     }
   </script>
 </body>
