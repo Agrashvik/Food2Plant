@@ -230,7 +230,47 @@
       } else {
         alert('Please enter a positive amount for donation.');
       }
-    }
+    }<!-- Header with navigation links -->
+<header>
+  <nav>
+    <button onclick="togglePage('homePage')">Home</button>
+    <button onclick="togglePage('shoppingPage')">Shop</button>
+    <button onclick="togglePage('donationPage')">Donate</button>
+  </nav>
+</header>
+
+<!-- Home Page -->
+<div class="container" id="homePage">
+  <h2>Welcome to Food2Plant</h2>
+  <!-- Other content for the home page -->
+</div>
+
+<!-- Shopping Page -->
+<div class="container" id="shoppingPage" style="display: none;">
+  <h2>Shopping Page</h2>
+  <!-- Other content for the shopping page -->
+</div>
+
+<!-- Donation Page -->
+<div class="container" id="donationPage" style="display: none;">
+  <h2>Donation Page</h2>
+  <!-- Other content for the donation page -->
+</div>
+
+<script>
+  // Function to toggle between pages
+  function togglePage(pageId) {
+    // Hide all pages
+    const pages = document.querySelectorAll('.container');
+    pages.forEach(page => {
+      page.style.display = 'none';
+    });
+    
+    // Show the selected page
+    document.getElementById(pageId).style.display = 'block';
+  }
+</script>
+
   </script>
 </body>
 </html>
