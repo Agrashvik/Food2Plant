@@ -124,14 +124,17 @@
 <body>
   <header>Food2Plant</header>
 
-  <!-- Compost Tracker Page -->
-  <div class="container">
-    <div class="tile">
-      <h2>Your Compost</h2>
-      <div class="progress-circle" id="progressCircle">
-        <span id="progressText">25%</span>
-      </div>
-    </div>
+  <!-- Navigation Bar -->
+  <nav>
+    <button onclick="togglePage('homePage')">Home</button>
+    <button onclick="togglePage('shoppingPage')">Shop</button>
+    <button onclick="togglePage('donationPage')">Donate</button>
+  </nav>
+
+  <!-- Home Page -->
+  <div class="container" id="homePage">
+    <h2>Welcome to Food2Plant</h2>
+    <p>Your journey towards a sustainable future begins here!</p>
   </div>
 
   <!-- Shopping Page -->
@@ -200,24 +203,11 @@
   </footer>
 
   <script>
-    let progress = 25;
-    const progressText = document.getElementById("progressText");
-    const progressCircle = document.getElementById("progressCircle");
-
-    function updateProgress() {
-      if (progress < 100) {
-        progress += 1;
-        progressText.textContent = progress + "%";
-        progressCircle.style.background = `conic-gradient(#2ecc71 ${progress}%, #e0e0e0 ${progress}%)`;
-      }
-    }
-
-    setInterval(updateProgress, 300000); // Update progress every 5 minutes
-
-    function togglePage(page) {
-      const pages = ['shoppingPage', 'donationPage'];
+    // Function to toggle between pages
+    function togglePage(pageId) {
+      const pages = ['homePage', 'shoppingPage', 'donationPage'];
       pages.forEach(p => {
-        document.getElementById(p).style.display = (p === page) ? 'block' : 'none';
+        document.getElementById(p).style.display = (p === pageId) ? 'block' : 'none';
       });
     }
 
@@ -230,47 +220,7 @@
       } else {
         alert('Please enter a positive amount for donation.');
       }
-    }<!-- Header with navigation links -->
-<header>
-  <nav>
-    <button onclick="togglePage('homePage')">Home</button>
-    <button onclick="togglePage('shoppingPage')">Shop</button>
-    <button onclick="togglePage('donationPage')">Donate</button>
-  </nav>
-</header>
-
-<!-- Home Page -->
-<div class="container" id="homePage">
-  <h2>Welcome to Food2Plant</h2>
-  <!-- Other content for the home page -->
-</div>
-
-<!-- Shopping Page -->
-<div class="container" id="shoppingPage" style="display: none;">
-  <h2>Shopping Page</h2>
-  <!-- Other content for the shopping page -->
-</div>
-
-<!-- Donation Page -->
-<div class="container" id="donationPage" style="display: none;">
-  <h2>Donation Page</h2>
-  <!-- Other content for the donation page -->
-</div>
-
-<script>
-  // Function to toggle between pages
-  function togglePage(pageId) {
-    // Hide all pages
-    const pages = document.querySelectorAll('.container');
-    pages.forEach(page => {
-      page.style.display = 'none';
-    });
-    
-    // Show the selected page
-    document.getElementById(pageId).style.display = 'block';
-  }
-</script>
-
+    }
   </script>
 </body>
 </html>
