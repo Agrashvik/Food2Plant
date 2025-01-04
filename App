@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food2Plants - Simple Compost Tracker</title>
+</head>
+<body>
+
+  <h1>Food2Plants</h1>
+
+  <h2>Add to Compost Log</h2>
+  <form>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date"><br><br>
+
+    <label for="materials">Materials Added:</label><br>
+    <textarea id="materials" name="materials" rows="4" cols="50"></textarea><br><br>
+
+    <label for="notes">Notes:</label><br>
+    <textarea id="notes" name="notes" rows="4" cols="50"></textarea><br><br>
+
+    <button type="submit">Add to Log</button>
+  </form>
+
+  <h2>Compost Log</h2>
+  <ul>
+    <li>July 5, 2024: Apple cores, coffee grounds. Notes: Moisture level seems good.</li>
+    <li>July 7, 2024: Egg shells, vegetable scraps. Notes: Added some shredded paper for extra carbon.</li>
+  </ul>
+
+  <h2>Compost Tips</h2>
+  <ul>
+    <li>Maintain a balance of "greens" (nitrogen-rich) and "browns" (carbon-rich) materials.</li>
+    <li>Keep your compost pile moist but not soggy.</li>
+    <li>Turn your compost pile regularly to aerate it.</li>
+  </ul>
+
+</body>
+</html>
