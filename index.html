@@ -89,6 +89,20 @@
       color: #27ae60;
       margin: 10px 0;
     }
+    .toggle-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #27ae60;
+      color: white;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .toggle-btn:hover {
+      background-color: #2ecc71;
+    }
   </style>
 </head>
 <body>
@@ -101,6 +115,7 @@
         <span id="progressText">25%</span>
       </div>
     </div>
+    <button class="toggle-btn" onclick="togglePage()">Go to Shopping Page</button>
   </div>
 
   <div class="container" id="shoppingPage" style="display: none;">
@@ -143,6 +158,7 @@
         <h3>Gardening Set of Tools</h3>
       </div>
     </div>
+    <button class="toggle-btn" onclick="togglePage()">Back to Compost Tracker</button>
   </div>
 
   <footer>
@@ -167,9 +183,10 @@
 
     // Function to toggle between compost tracker and shopping page
     function togglePage() {
+      const compostPage = document.querySelector('.container');
       const shoppingPage = document.getElementById("shoppingPage");
-      shoppingPage.style.display =
-        shoppingPage.style.display === "none" ? "block" : "none";
+      compostPage.style.display = compostPage.style.display === "none" ? "block" : "none";
+      shoppingPage.style.display = shoppingPage.style.display === "none" ? "block" : "none";
     }
   </script>
 </body>
